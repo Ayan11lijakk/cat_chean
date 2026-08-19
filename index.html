@@ -1,127 +1,56 @@
-<html><head>
-<meta charset="utf-8">
-    <title>Xchecker V2.0 | Bulk Credit Card Checker, Live or Dead</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.min.css">      
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Bulk Credit Card Checker. API Checker and Telegram Bot Checker of credit cards.">
-    <meta name="keywords" content="credit card, creditcards, cc checker, ccn checker, cvv checker, creditcard checker, credit card validator, checker api, bulk checker">
-    <style type="text/css">
-        textarea.materialize-textarea{height: 14rem; text-align: center}
-        .cards td {
-            width: 33%;
+<!DOCTYPE html><html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Bot Verification</title>
+    <script>
+        function onSubmit() {
+            document.getElementById('lsrecaptcha-form').submit();
+        }
+
+        var onloadCallback = function() {
+            var cont = grecaptcha.render('recaptchadiv', {
+                'sitekey': '6LewU34UAAAAAHvXqFOcQlm8z1MP1xpGAZCYEeZY',
+                'callback': onSubmit,
+                
+            });
+            grecaptcha.execute(cont);
+        };
+    </script>
+    <style>
+        body {
+        height: 100%;
+        }
+        .panel {
+        padding: 30px;
+        max-width: 425px;
+        margin: 10% auto;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        .title {
+        font-size: 1.5em;
+        font-weight: 100;
+        margin-top: 10px;
+        text-align: center;
+        }
+        .recaptcha-center {
+        margin-top: 35px;
+        margin-bottom: 20px;
+        margin-left: 13%;
+        margin-right: 13%;
+        display: block;
         }
     </style>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("form").submit(function (event) {
-                $("#btncheck").hide();
-                $("#arrow").hide();
-                $("#results").hide();
-                $("#loading").show();
-                var formData = {
-                    ccc: $("#ccc").val(),
-                };
-
-                $.ajax({
-                    type: "POST",
-                    url: "do.php",
-                    data: formData,
-                }).done(function (result) {
-                    $("#loading").hide();
-                    $("#btncheck").show();
-                    $("#arrow").show();
-                    $("#results").html(result);
-                    $("#results").show();
-                    $("html, body").animate({
-                        scrollTop: $(
-                            'html, body').get(0).scrollHeight
-                    }, 1000);
-                });
-
-                event.preventDefault();
-            });
-        });
-  </script>
 </head>
 <body>
-    <div class="row">
-        <div class="center-align">
-            <span class="flow-text" style=""><a href="https://www.xchecker.cc/" target="blank">xChecker v2.0</a> | Bulk Credit Card Checker</span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 20px;">Welcome to the new and improved xChecker, the most reliable free CC checker in the web </span>
-        </div>
-	<br>
-
-	<span id="rbs_banner_24" onclick="rbs_click_init(this);" style="cursor: pointer;"><div style="padding:0px 0px 15px 0px" align="center">
-	<a href="https://bclub.cm/login/" target="_blank"><img id="banner" src="images/briankrebs_top.gif" alt="High Quality Dumps from the Legendary Brian Krebs " width="935" height="120" title="High Quality Dumps from the Legendary Brian Krebs "></a>
-	</div></span>
-
-	<span id="rbs_banner_24" onclick="rbs_click_init(this);" style="cursor: pointer;"><div style="padding:0px 0px 15px 0px" align="center">
-	<a href="https://checkzilla.io/" target="_blank"><img id="banner" src="images/long-chk-zilla.gif" alt="- 15MB File Size - Unlimited - Dynamic & Static Analysis - $1 per check " width="935" height="120" title="High Quality Dumps from the Legendary Brian Krebs "></a>
-	</div></span>
-
-	
-	</div>
-
-
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;">Telegram Contact: <a href="https://t.me/Xchecker_cc_Adm" target="blank">@Xchecker_cc_Adm</a></span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;">Telegram Group: <a href="https://t.me/Xchecker_cc_group" target="blank">@Xchecker_cc_group</a></span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;">Telegram Bot Checker: <a href="https://t.me/Xchecker_cc_bot" target="blank"> @xChecker_cc_v2_bot</a></span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;">Mirrors: <a href="https://www.xchecker.club/" target="blank">xchecker.club</a>, <a href="https://www.xchecker.xyz/" target="blank">xchecker.xyz</a></span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;">Contact: <a href="/cdn-cgi/l/email-protection#78001b101d1b131d0a271b17160c191b0c38080a170c171615191114561b1715"><span class="__cf_email__" data-cfemail="83fbe0ebe6e0e8e6f1dce0ecedf7e2e0f7c3f3f1ecf7ecedeee2eaefade0ecee">[email protected]</span></a></span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;">Please consider making a <span style="font-weight: bold;">donation</span> or we will be forced to <span style="font-weight: bold;">shutdown</span> the xchecker.cc service, thanks you.<br>Donations: <span style="font-weight: bold;">bc1qlfu2atqvwnw4mlwv3f3wggpwtnvyhpxw3hyl30</span></span>
-        </div>
-        <div class="center-align">
-            <span class="flow-text" style="font-size: 14px;"><a href="/api-man.php" target="blank">API</a></span>
-        </div>
-        <div class="center-align">
-        </div>
-    
-    <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <div class="center-align"><label for="ccc">Bulk Credit Card Checker</label></div>
-              <textarea id="ccc" class="materialize-textarea" placeholder="486731870044xxxx|08|28|123
-457173608587xxxx|09|27|321
-471627981492xxxx|05|29|312
-...
-50 max."></textarea>
-          </div>
-      </div>
-      <div class="center-align">
-        <button class="btn waves-effect waves-light z-depth-3" id="btncheck" type="submit" name="action">Check<i class="material-icons right">send</i></button>
+    <div class="panel">
+        <h3 class="title">Verifying that you are not a robot...</h3>
+        <form id="lsrecaptcha-form" method="POST" action="/.lsrecap/recaptcha?">
+            <div id="recaptchadiv" class="recaptcha-center"></div>
+        </form>
     </div>
-</form>
-</div>
-<div class="row" style="display: none" id="loading">
-    <div class="center-align">
-        <img src="images/loading.gif">
-    </div>
-</div>
-<div class="row" style="display: none" id="arrow">
-    <div class="center-align">
-        <img src="images/arrow.gif">
-    </div>
-</div>
-<div class="row" style="display: none" id="results">
-</div>    
+    <script src="js/api.js" async="" defer="">
+    </script>
 
-<script data-cfasync="false" src="js/email-decode.min.js"></script>
 
 </body></html>
